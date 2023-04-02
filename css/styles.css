@@ -1,0 +1,72 @@
+/*body styling*/
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Navigation bar*/
+
+header img {
+  max-width: 115px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  max-height: 80px;
+  padding: 10px;
+}
+
+header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-icons {
+  margin: 0px 20px 0px auto;
+  padding: 10px;
+  display: block;
+  max-width: 200px;
+}
+
+.nav-icons .fa-solid {
+  padding: 10px;
+}
+
+nav li {
+  display: block;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+}
+
+#hamburger-menu {
+  /* display: none; */
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+
+/*Media Queries*/
+
+@media (min-width: 1000px) {
+
+  nav {
+    display: block;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+}
+
