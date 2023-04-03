@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+.active {
+  font-size: 1.1em;
+}
+
 /*Navigation bar*/
 
 header img {
@@ -88,12 +92,12 @@ nav a {
 
 .giftcard {
   text-align: center;
-  width: 100%;
-  font-size: 0.7em;
+  width: 100vw;
+  font-size: 0.5em;
   background-color: #000;
   color: #FFF;
   padding: 2px 0px;
-  margin: 0px;
+  margin: auto;
   display: block;
   text-decoration: none;
 }
@@ -124,8 +128,8 @@ nav a {
   background-image: url(../images/scott_photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
   height: 500px;
-  min-width: 
   margin: 20px 20px;
   display: flex;
   flex-direction: column;
@@ -134,6 +138,98 @@ nav a {
   padding-bottom: 50px;
   color: #FFF;
 }
+
+.frontpage-products h3 {
+  text-align: center;
+}
+
+.frontpage-products-all {
+  display: flex;
+  flex-direction: column;
+}
+
+.frontpage-products-upper,
+.frontpage-products-lower {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+  padding: 10px;
+}
+
+.frontpage-product-title-and-heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.frontpage-products-upper p, h4  {
+  margin: 0px 5px;
+}
+
+.frontpage-products-lower p, h4  {
+  margin: 0px 5px;
+}
+
+.frontpage-products-all p {
+  padding: 0px 5px;
+}
+
+.selected-offers {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/*Product pages*/
+
+.jacket-tile img {
+  max-width: 250px;
+}
+
+.jacket-tile {
+  margin: auto;
+  max-width: 250px;
+}
+
+.jacket-tile p {
+  text-align: left;
+  margin-left: 5px;
+}
+
+.product-header {
+  text-align: center;
+  /* margin: auto; */
+}
+
+.product-header img {
+  height: auto;
+  width: 80vw;
+  max-width: 400px;
+  min-width: 240px;
+  margin: auto;
+}
+
+.product-header h1 {
+  font-family: 'Fjalla One',Verdana, sans-serif;
+  font-weight: lighter;
+  font-size: 1.2em;
+  padding: 20px;
+}
+
+.product-header p {
+  max-width: 350px;
+  min-width: 300px;
+  text-align: left;
+  margin: 0px auto;
+  padding: 20px;
+  font-size: 0.8em;
+}
+
+
+/*Product category pages*/
+
+
 
 /*Footer*/
 
@@ -233,9 +329,18 @@ footer label {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 
+  .frontpage-products-all {
+    flex-direction: row;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
 
+  .giftcard {
+    font-size: 0.7em;
+  }
 }
 
 @media (min-width: 800px) {
@@ -259,7 +364,7 @@ footer label {
     grid-template-rows: auto auto;
 
    }
-   
+
    .footer-text-rainydays {
     display: block;
     grid-column: 1;
@@ -293,9 +398,63 @@ footer label {
    footer ul {
     font-size: 0.8em;
    }
+
+   .product-header p {
+    max-width: 400px;
+    font-size: 0.8em;
+   }
+
+   .jacket-tile img {
+    max-width: 300px;
+  }
+  
+  .jacket-tile {
+    margin: auto;
+    max-width: 300px;
+  }
+
+  .jackets-for-sale {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1000px;
+    padding: 0px 50px 50px 0px;
+  }
 }
 
+@media (min-width: 1200px) {
 
+  .product-header {
+    margin: auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    padding: 75px;
+  }
 
+  .product-header h1 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.5em;
+    padding: 0px;
+    margin: 0px;
+  }
 
+  .product-header p {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+@media (min-width: 1300px) {
+  .frontpage-products {
+    display: flex;
+    justify-content: center;
+  }
+
+  .frontpage-products {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
 
