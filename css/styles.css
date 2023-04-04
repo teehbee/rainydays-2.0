@@ -16,12 +16,12 @@ a {
 
 /*Navigation bar*/
 
-header img {
+.main-header img {
   max-width: 115px;
   padding: 10px;
 }
 
-header {
+.main-header {
   border-top: solid 20px #000;
   display: flex;
   flex-direction: row-reverse;
@@ -87,6 +87,16 @@ nav a {
   font-weight: bold;
   padding: 6px 12px;
 }
+
+.cta-green {
+  font-size: 1em;
+  background: #34a853;
+  color: #FFF;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+}
+
 
 /*Index Page*/
 
@@ -226,10 +236,228 @@ nav a {
   font-size: 0.8em;
 }
 
+/*Contact page*/
 
-/*Product category pages*/
+.contact-box h1 {
+  text-align: center;
+  font-family: 'Fjalla One',Verdana, sans-serif;
+}
 
+.main-contact-page {
+  min-height: 100vh;
+}
 
+.contact-tiles {
+ max-width: 1050px;
+ margin: auto;
+}
+
+.contact-box {
+  max-width: 400px;
+  margin: 15px auto 15px auto;
+  background: #FFF;
+  padding: 10px;
+}
+
+.contact-box h1 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.contact-box h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.contact-box p {
+  font-size: 1em;
+  
+}
+
+.contact-info {
+  max-width: 400px;
+  margin: 15px auto 15px auto;
+  padding: 10px;
+  text-align: center;
+  background: #FFF;
+}
+
+.contact-names {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: start;
+}
+
+.contact-names input {
+  min-width: 90%;
+  margin: 10px 0px;
+  padding: 10px 5px;
+}
+
+.contact-form input, textarea {
+  min-width: 97%;
+  margin: 10px 0px;
+  padding: 10px 5px;
+}
+
+.contact-send {
+  display: inline-block;
+  min-width: 40%;
+}
+
+/*About*/
+
+  .about-text {
+    text-align: center;
+    max-width: 80%;
+    min-width: 240px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .about-text h1 {
+    font-family: 'Fjalla One',Verdana, sans-serif;
+    font-size: 1.2em;
+  }
+
+  .about-text p {
+    font-size: 0.8em;
+  }
+
+  .about-pictures {
+    text-align: center;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-pictures img {
+    height: auto;
+    width: 90%;
+    padding-bottom: 20px;
+  }
+
+/* Shopping cart */
+
+.cart-header {
+  background: #EBEBEB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-header a {
+  text-decoration: underline;
+  font-family: 'Fjalla One',Verdana, sans-serif;
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+.cart-logo {
+  max-width: 115px;
+  padding: 10px;
+}
+
+.main-cart {
+  background: #EBEBEB;
+}
+
+.shopping-cart {
+  height: auto;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0px auto 25px auto;
+  background: #FFF;
+}
+
+.cart-giftcard {
+  height: auto;
+  width: 90%;
+  margin: auto;
+}
+
+.main-cart h3 {
+  font-size: 0.6em;
+  padding: 3px 0px 3px 6px;
+  font-family: 'Fjalla One',Verdana, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.main-cart h1, h2 {
+  font-size: 0.8em;
+  padding: 3px 0px 3px 6px;
+  margin: 0px;
+  letter-spacing: 0.1em;
+}
+
+.cart-product-1, 
+.cart-product-2 {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+  grid-template-rows: auto auto;
+}
+
+.header-black {
+  height: auto;
+  width: 100%;
+  background: #000;
+  color: #FFF;
+  margin: auto;
+}
+
+.main-cart img {
+  max-width: 50px;
+  padding: 10px 0px 0px 0px;
+  grid-row: 1/3;
+}
+
+.cart-product-name {
+  font-size: 0.6em;
+  padding: 0px 5px;
+}
+
+.cart-product-size {
+  font-size: 0.5em;
+  padding: 0px 5px;
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.cart-product-price {
+  font-size: 0.5em;
+  padding: 0px 5px;
+  grid-row: 2;
+}
+
+.cart-product-sum {
+  grid-column: 4;
+  font-size: 0.5em;
+  font-weight: bold;
+  grid-row: 2;
+  text-align: right;
+}
+
+.cart-giftcard {
+  background-color: #FFF;
+}
+
+.cart-giftcard-section input {
+  padding: 5px;
+  width: 225px;
+  margin-left: 5px;
+}
+
+.gift-card-cta input {
+  margin-top: 10px;
+  padding: 5px;
+  width: 50px;
+  background-color: #000;
+  color: #FFF;
+  border: none;
+}
 
 /*Footer*/
 
@@ -341,9 +569,43 @@ footer label {
   .giftcard {
     font-size: 0.7em;
   }
+
+  .about-pictures {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 20px 50px 20px;
+  }
+
+  .about-pictures img {
+    height: auto;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .about-text {
+    max-width: 60%;
+  }
+
+  .main-cart img {
+    max-width: 75px;
+  }
+
+  .cart-product-name,
+  .cart-product-size,
+  .cart-product-price,
+  .cart-product-sum {
+    font-size: 0.7em;
+  }
 }
 
 @media (min-width: 800px) {
+
+  .contact-names input {
+    min-width: 45%;
+    margin: 20px 10px;
+  }
 
   nav {
     display: block;
@@ -356,6 +618,25 @@ footer label {
 
   .fa-bars {
     display: none;
+  }
+
+  .contact-box {
+    max-width: 500px;
+    border: 1px solid #8DE186;
+  }
+
+  .contact-info {
+    max-width: 500px;
+    border: 1px solid #8DE186;
+  }
+
+  .contact-names {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contact-box h1 {
+    text-align: left;
   }
 
   footer {
@@ -444,6 +725,21 @@ footer label {
     grid-row: 1;
     grid-column: 2;
   }
+
+.contact-tiles {
+  display: flex;
+}
+
+.contact-box {
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.contact-info {
+  margin-left: 20px;
+  padding: 20px;
+}
+
 }
 
 @media (min-width: 1300px) {
