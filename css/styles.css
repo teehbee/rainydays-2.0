@@ -97,7 +97,6 @@ nav a {
   cursor: pointer;
 }
 
-
 /*Index Page*/
 
 .giftcard {
@@ -375,7 +374,9 @@ nav a {
 .cart-giftcard {
   height: auto;
   width: 90%;
-  margin: auto;
+  max-width: 1100px;
+  margin: 0px auto 25px auto;
+  padding-bottom: 10px;
 }
 
 .main-cart h3 {
@@ -457,6 +458,87 @@ nav a {
   background-color: #000;
   color: #FFF;
   border: none;
+}
+
+.purchase-forms input {
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 40%;
+  min-width: 225px;
+  margin-left: 5px;
+}
+
+.purchase-forms p {
+  font-size: 0.4em;
+  margin: 0px 5px;
+}
+
+.complete-purchase {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  background: #FFF;
+}
+
+.purchase-complete-order input {
+  padding: 5px;
+  height: auto;
+  width: 200px;
+  background-color: #000;
+  color: #FFF;
+  border-style: none;
+}
+
+.delivery-box h4 {
+  font-family: 'Fjalla One',Verdana, sans-serif;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.delivery-box h5 {
+  font-family: 'Fjalla One',Verdana, sans-serif;
+  font-size: 0.6em;
+  margin: 5px 0px 5px 5px;
+}
+
+.delivery-beige-box {
+  width: 95%;
+  height: auto;
+  margin: 0px auto 0px auto;
+  background: #FFF1C7;
+}
+
+.delivery-beige-box h6 {
+  font-size: 1em;
+  text-align: center;
+  font-weight: lighter;
+  margin: 0px auto 0px auto;
+  padding-top: 15px;
+}
+
+.delivery-beige-box p {
+  font-size: 0.8em;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.cart-checkboxes {
+  margin-left: 0px 10 0px 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 0px;
+  max-width: 90%;
+  margin: 30px auto;
+}
+
+.cart-checkboxes input {
+  grid-column: 1;
+  font-size: 1.2em;
+}
+
+.cart-checkboxes label {
+  grid-column: 2;
+  font-size: 0.8em;
 }
 
 /*Footer*/
@@ -721,9 +803,9 @@ footer label {
     margin: 0px;
   }
 
-  .product-header p {
-    grid-row: 1;
-    grid-column: 2;
+.product-header p {
+  grid-row: 1;
+  grid-column: 2;
   }
 
 .contact-tiles {
@@ -739,7 +821,6 @@ footer label {
   margin-left: 20px;
   padding: 20px;
 }
-
 }
 
 @media (min-width: 1300px) {
