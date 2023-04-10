@@ -698,6 +698,48 @@ nav a {
   margin: 0px;
 }
 
+/*jacket-specific*/
+
+.product-main {
+  height: auto; 
+  text-align: center;
+  min-height: 100vh;
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.product-main img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-main h1 {
+  font-family: 'Fjalla One',Verdana, sans-serif;
+  font-weight: lighter;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.jacket-specific-title-and-heart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.jacket-specific-color {
+  text-align: left;
+  font-size: 0.8em;
+  margin: 0px;
+}
+
+.jacket-specific-price {
+  font-size: 0.8em;
+  text-align: left;
+  font-weight: bold;
+}
+
 /*Footer*/
 
 footer {
