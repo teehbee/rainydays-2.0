@@ -22,7 +22,7 @@ a {
 }
 
 .main-header {
-  border-top: solid 20px #000;
+  border-top: solid 15px #000;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -72,6 +72,44 @@ nav a {
   display: block;
 }
 
+/*Search bar*/
+
+#search {
+  top: 125px;
+  right: 70px;
+  display: none;
+  position: absolute;
+  background: #FFF;
+  padding: 5px;
+  border: 1px solid #ebebeb;
+}
+
+.search-button {
+  top: 127px;
+  right: 30px;
+  display: none;
+  position: absolute;
+  background: #EBEBEB;
+  border: none;
+  padding: 5px;
+}
+
+header input {
+  padding: 0px;
+}
+
+#search-icon {
+  display: none;
+}
+
+#search-icon:checked ~ #search {
+  display: block;
+}
+
+#search-icon:checked ~ .search-button {
+  display: block;
+}
+
 /*Buttons*/
 
 .cta-black {
@@ -86,6 +124,7 @@ nav a {
   color: #000;
   font-weight: bold;
   padding: 6px 12px;
+  margin-top: 10px;
 }
 
 .cta-green {
@@ -101,7 +140,7 @@ nav a {
 
 .giftcard {
   text-align: center;
-  width: 100vw;
+  width: 100%;
   font-size: 0.5em;
   background-color: #000;
   color: #FFF;
@@ -115,6 +154,7 @@ nav a {
   background-image: url(../images/sale_photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #000;
   height: 500px;
   margin: 20px 20px;
   display: flex;
@@ -137,6 +177,7 @@ nav a {
   background-image: url(../images/scott_photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #000;
   text-align: center;
   height: 500px;
   margin: 20px 20px;
@@ -187,7 +228,7 @@ nav a {
 
 .selected-offers {
   text-align: center;
-  padding-bottom: 10px;
+  padding: 20px 0px;
 }
 
 /*Product pages*/
@@ -270,7 +311,7 @@ nav a {
 
 .contact-box p {
   font-size: 1em;
-  
+
 }
 
 .contact-info {
@@ -393,7 +434,7 @@ nav a {
   letter-spacing: 0.1em;
 }
 
-.cart-product-1, 
+.cart-product-1,
 .cart-product-2 {
   padding: 10px;
   display: grid;
@@ -578,7 +619,7 @@ nav a {
 /*Success page*/
 
 .confirmation-thank-you {
-  height: auto; 
+  height: auto;
   width: 90%;
   text-align: center;
   margin: 20px auto;
@@ -669,7 +710,7 @@ nav a {
   background: #34a853;
   color: #FFF;
   padding: 5px;
-  border: none; 
+  border: none;
   width: 175px;
 }
 
@@ -701,7 +742,7 @@ nav a {
 /*jacket-specific*/
 
 .product-main {
-  height: auto; 
+  height: auto;
   text-align: center;
   min-height: 100vh;
   width: 90%;
@@ -712,6 +753,7 @@ nav a {
 .product-main img {
   width: 100%;
   max-width: 300px;
+  grid-row: 1/5;
 }
 
 .product-main h1 {
@@ -721,11 +763,18 @@ nav a {
   text-align: left;
 }
 
+.jacket-specific-picture {
+  grid-column: 1;
+  grid-row: 1/6;
+  padding-top: 50px;
+}
+
 .jacket-specific-title-and-heart {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+  grid-column: 2;
 }
 
 .jacket-specific-color {
@@ -738,6 +787,51 @@ nav a {
   font-size: 0.8em;
   text-align: left;
   font-weight: bold;
+}
+
+.size-selector {
+  display: flex;
+}
+
+.size-selector label {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 10px 10px 0px 0px;
+}
+
+.size-selector select {
+  margin-top: 10px;
+}
+
+.purchase-button {
+  margin: 30px 0px 20px 0px;
+  text-align: left;
+  grid-column: 2;
+}
+
+.purchase-button .cta-green {
+  padding: 6px 10px;
+  display: inline-block;
+  min-width: 150px;
+  text-align: center;
+}
+
+.product-main h2 {
+  text-align: left;
+  padding-left: 0px;
+}
+
+.jacket-specific-h2 {
+  grid-column: 2;
+}
+
+.jacket-specific-info-text {
+  grid-column: 2;
+}
+
+.product-info {
+  font-size: 0.6em;
+  text-align: left;
 }
 
 /*Footer*/
@@ -836,9 +930,25 @@ footer label {
     min-width: 501px;
     min-height: 650px;
   }
+
+  #search {
+    top: 106px;
+    padding: 8px;
+    right: 75px;
+  }
+  
+  .search-button {
+    top: 106px;
+    padding: 9px;
+  }
+
 }
 
 @media (min-width: 700px) {
+
+  .main-header {
+    border-top: solid 20px #000;
+  }
 
   .frontpage-products-all {
     flex-direction: row;
@@ -891,6 +1001,7 @@ footer label {
   nav {
     display: block;
     position: static;
+    padding: 0px;
   }
 
   nav li {
@@ -969,7 +1080,7 @@ footer label {
    .jacket-tile img {
     max-width: 300px;
   }
-  
+
   .jacket-tile {
     margin: auto;
     max-width: 300px;
@@ -1078,10 +1189,46 @@ footer label {
     max-width: 1200px;
     margin: auto;
   }
-}
 
 .cart-giftcard-section h3 {
   font-size: 0.8em;
+}
+
+.product-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 100px 50px 50px 50px 150px;
+  max-width: 700px;
+}
+
+.purchase-button {
+  text-align: right;
+  margin-top: 0px;
+}
+
+.jacket-color-price {
+  display: flex;
+  grid-column: 2;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.size-selector select {
+  height: 25px;
+}
+
+.jacket-specific-title-and-heart {
+  padding-top: 50px;
+}
+
+.jacket-specific-info-text {
+  font-size: 1.4em;
+}
+
+.jacket-specific-h2 {
+  font-size: 1.2em;
+}
+
 }
 
 @media (min-width: 1200px) {
