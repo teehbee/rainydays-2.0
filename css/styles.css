@@ -249,7 +249,7 @@ header input {
 
 .product-header {
   text-align: center;
-  /* margin: auto; */
+  margin: auto;
 }
 
 .product-header img {
@@ -268,8 +268,7 @@ header input {
 }
 
 .product-header p {
-  max-width: 350px;
-  min-width: 300px;
+  width: 80%;
   text-align: left;
   margin: 0px auto;
   padding: 20px;
@@ -966,6 +965,8 @@ footer label {
   .about-pictures {
     text-align: center;
     display: grid;
+    width: 70%;
+    margin: auto;
     grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     padding: 0px 20px 50px 20px;
@@ -978,7 +979,7 @@ footer label {
   }
 
   .about-text {
-    max-width: 60%;
+    max-width: 40%;
   }
 
   .main-cart img {
