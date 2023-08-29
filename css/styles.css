@@ -226,6 +226,10 @@ header input {
   padding: 0px 5px;
 }
 
+.frontpage-products img {
+  max-width: 250px;
+}
+
 .selected-offers {
   text-align: center;
   padding: 20px 0px;
