@@ -1,14 +1,13 @@
 const url = "https://api.noroff.dev/api/v1/rainy-days/";
 
-export async function getJackets() {
-    try {
-        const response = await fetch(url);
+async function getJackets() {
 
-        const result = await response.json();
+const response = await fetch(url);
 
-        return result; 
+const jacket = await response.json();
 
-        } catch {
-          error();
-        }
-    }
+return jacket;
+
+}
+
+export { getJackets };

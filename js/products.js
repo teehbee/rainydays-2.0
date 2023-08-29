@@ -1,19 +1,15 @@
+
+
+import { getJackets } from "./api.js";
+
 const jacketFrontPageContainer = document.querySelector(".frontpage-products");
 
-const url = "https://api.noroff.dev/api/v1/rainy-days/";
+    async function frontPageJackets() {
+        const jacket = await getJackets();
+    
 
-async function getJackets() {
-
-    const response = await fetch(url); 
-
-    const jacket = await response.json();
-
-    for (let i = 0; i < jacket.length; i++) {
+    for (let i = 0; i < 4; i++) {
         console.log(jacket[i]);
-
-        if (i === 4) {
-            break;
-        }
 
         jacketFrontPageContainer.innerHTML += `
         <div class="frontpage-products-lower"><a href="jacket-specific.html"><img src="${jacket[i].image}" alt="${jacket[i].title}"></a>
@@ -26,4 +22,4 @@ async function getJackets() {
     }
 }
 
-getJackets();
+frontPageJackets();
