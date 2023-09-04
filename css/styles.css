@@ -193,6 +193,11 @@ header input {
   text-align: center;
 }
 
+.frontpage-products {
+  text-align: center;
+  font-weight: bold;
+}
+
 .frontpage-products-all {
   display: flex;
   flex-direction: column;
@@ -238,17 +243,25 @@ header input {
 /*Product pages*/
 
 .jacket-tile img {
-  max-width: 250px;
+  max-width: 300px;
+  max-height: 250px;
+}
+
+.jacket-tile h3 {
+  font-size: 0.8em;
 }
 
 .jacket-tile {
   margin: auto;
+  padding: 20px;
   max-width: 250px;
 }
 
 .jacket-tile p {
   text-align: left;
   margin-left: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
 .product-header {
@@ -277,6 +290,11 @@ header input {
   margin: 0px auto;
   padding: 20px;
   font-size: 0.8em;
+}
+
+.jackets-for-sale p {
+  margin: 0 auto;
+  font-weight: bold;
 }
 
 /*Contact page*/
@@ -911,6 +929,23 @@ footer label {
 .footer-logo img {
   text-align: center;
   max-width: 150px;
+}
+
+/*Loader*/
+
+.loader {
+  margin: 0 auto;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #000;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /*Media Queries*/

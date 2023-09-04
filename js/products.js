@@ -1,11 +1,13 @@
 
-
 import { getJackets } from "./api.js";
 
 const jacketFrontPageContainer = document.querySelector(".frontpage-products");
 
     async function frontPageJackets() {
+        try {
         const jacket = await getJackets();
+        const fetchLoader = document.querySelector(".loader");
+        fetchLoader.classList.remove("loader");
     
 
     for (let i = 0; i < 4; i++) {
@@ -18,7 +20,10 @@ const jacketFrontPageContainer = document.querySelector(".frontpage-products");
         <i class="fa-regular fa-heart fa-lg"></i></div>
         <p>USD ${jacket[i].price}</p>
         </div>`
-
+    } 
+    }   catch(error) {
+        console.log("An error has occured!");
+        jacketFrontPageContainer.innerHTML = "Something went wrong!";
     }
 }
 

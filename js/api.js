@@ -7,7 +7,6 @@ const response = await fetch(url);
 const jacket = await response.json();
 
 return jacket;
-
 }
 
 export { getJackets };
